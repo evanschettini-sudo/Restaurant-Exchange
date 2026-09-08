@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="REM leaf mark">
+  <rect width="512" height="512" rx="112" fill="#065f46"/>
+  <path d="M384 112c-131 9-220 66-230 163-7 64 29 109 84 119 93 17 158-79 146-282Z" fill="#ecfdf5"/>
+  <path d="M130 400c54-103 121-166 220-231" fill="none" stroke="#065f46" stroke-width="25" stroke-linecap="round"/>
+</svg>
