@@ -23,16 +23,23 @@ and organization access helpers. These grants are intentional: the functions use
 execution notices have been resolved. See
 [Supabase's advisor explanation](https://supabase.com/docs/guides/database/database-linter?lint=0029_authenticated_security_definer_function_executable).
 
+## Hosting verification completed September 21, 2026
+
+- Imported the existing GitHub repository into Vercel and configured the three
+  public environment variables using the Supabase publishable key.
+- Deployed main commit `05e4d520e499b62abc80606cc5fff6a7060bc404` successfully
+  to https://restaurant-exchange.vercel.app (Vercel's Production target, used
+  for pre-launch testing; not a separate isolated staging environment).
+- Fixed the unsupported `lax1` function region to `iad1` on main.
+- Verified the root redirects to sign-in, sign-in returns HTTP 200, and the
+  observed requests have no application errors. Supabase's public API responded.
+- Phone authentication was disabled at that verification; end-to-end login
+  was not tested. Hosting success does not establish a functional marketplace.
+
 ## Remaining before Module 1 is complete
 
-1. Import this GitHub repository into Vercel and configure staging.
-2. Set `NEXT_PUBLIC_APP_URL` to the staging origin,
-   `NEXT_PUBLIC_SUPABASE_URL` to `https://tgnawthfrszojkvwizss.supabase.co`,
-   and `NEXT_PUBLIC_SUPABASE_ANON_KEY` to the project's public API key.
-3. Deploy from main after merging the migration-history changes.
-4. Verify the hosted application with browser/server error inspection.
-5. Create staging demo identities through supported Auth flows, then onboard
-   fictional restaurants. Do not deploy the local-only `supabase/seed.sql`.
+Create staging demo identities through supported Auth flows, then onboard
+fictional restaurants. Do not deploy the local-only `supabase/seed.sql`.
 
 Phone OTP/SMS-provider setup and two actual browser sign-ins remain Module 2 work.
 The SQL test proves database behavior; it does not prove live SMS or browser sessions.
